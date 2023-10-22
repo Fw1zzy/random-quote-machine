@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import quotes from "./constant/quotes.json";
-import { FaTwitter, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { FaTwitter,FaTumblr, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import './App.css'
 
 interface Quote {
@@ -53,24 +53,37 @@ function App() {
           <h4 id="author">- {quote.author}</h4>
         </div>
         <div className="buttons">
-          <a 
-            href={'twitter.com/intent/tweet'}
-            id="tweet-quote"
-            style={{
-              backgroundColor: randomColor,
-              marginRight: "10px",
-              transition,
-            }}
-          >
-            <FaTwitter color="white" />
-          </a>
-          <button 
+        <div>
+            <a 
+              href={'twitter.com/intent/tweet'}
+              id="tweet-quote"
+              style={{
+                backgroundColor: randomColor,
+                marginRight: "10px",
+                transition,
+              }}
+            >
+              <FaTwitter color="white" />
+            </a>
+            <a 
+              href={'https://www.tumblr.com/'}
+              id="tweet-quote"
+              style={{
+                backgroundColor: randomColor,
+                marginRight: "10px",
+                transition,
+              }}
+            >
+              <FaTumblr color="white" />
+            </a>
+          </div>
+            <button 
             id="new-quote" 
             onClick={changeQuote}
             style={{ backgroundColor: randomColor, transition }}
           >
             Change Quote
-          </button>
+            </button>
         </div>
       </div>
     </div>

@@ -43,3 +43,9 @@ button, a {
   color: #fff;
   font-size: 1em;
 }
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
